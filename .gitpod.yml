@@ -1,0 +1,14 @@
+image: ghcr.io/cpp-review-dune/introductory-review/deal-ii
+
+tasks:
+  - name: Install xbraid
+    env:
+      PKGBUILD: "https://gitlab.com/dune-archiso/pkgbuilds/dune/-/raw/main/PKGBUILDS/xbraid/PKGBUILD"
+    command: |
+      sudo pacman --noconfirm -Sy archlinux-keyring >/dev/null 2>&1
+      sudo pacman --needed --noconfirm --noprogressbar -Syuq >/dev/null 2>&1
+      pushd /tmp
+      curl -LO $PKGBUILD
+      makepkg -sic --noconfirm
+      find . -name '*.tar.*' -exec rm {} \;
+      popd
