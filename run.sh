@@ -16,3 +16,6 @@ cmake \
   -Wno-dev
 
 cmake --build build
+pushd build
+./parallel_in_time | tee -a $(date -u +"%Y-%m-%d-%H-%M-%S" --date='5 hours ago').log
+popd
