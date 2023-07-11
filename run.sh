@@ -6,9 +6,8 @@ if [ -d "$DIR" ]; then
   rm -rf "$DIR"
 fi
 
-export BRAID_INCLUDE_DIR=/usr/include
 
-cmake \
+BRAID_INCLUDE_DIR=/usr/includecmake \
   -S code-gallery/parallel_in_time \
   -B build \
   -DCMAKE_BUILD_TYPE=Release \
