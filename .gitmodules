@@ -1,0 +1,3 @@
+[submodule "code-gallery"]
+	path = code-gallery
+	url = https://github.com/cpp-review-dune/code-gallery.git
