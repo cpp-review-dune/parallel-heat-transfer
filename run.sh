@@ -6,7 +6,9 @@ if [ -d "$DIR" ]; then
   rm -rf "$DIR"
 fi
 
-BRAID_DIR=/usr/include/xbraid/ cmake \
+BRAID_DIR=/usr/include/xbraid/
+
+cmake \
   -S code-gallery/parallel_in_time \
   -B build \
   -DCMAKE_BUILD_TYPE=Release \
