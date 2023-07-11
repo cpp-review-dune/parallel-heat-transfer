@@ -6,7 +6,7 @@ if [ -d "$DIR" ]; then
   rm -rf "$DIR"
 fi
 
-BRAID_DIR=/usr/include/xbraid/
+export BRAID_DIR=/usr/include/xbraid/
 
 cmake \
   -S code-gallery/parallel_in_time \
