@@ -10,6 +10,6 @@ tasks:
       pushd /tmp
       curl -LO $PKGBUILD
       makepkg -sc --noconfirm
-      sudo pacman -U xbraid-*.pkg.tar.zst
+      sudo pacman -U xbraid-*.pkg.tar.zst --noconfirm
       find . -name '*.tar.*' -exec rm {} \;
       popd
