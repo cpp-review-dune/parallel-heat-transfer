@@ -9,6 +9,6 @@ tasks:
       sudo pacman --needed --noconfirm --noprogressbar -Syuq >/dev/null 2>&1
       pushd /tmp
       curl -LO $PKGBUILD
-      makepkg -sic --noconfirm
+      sudo makepkg -sic --noconfirm
       find . -name '*.tar.*' -exec rm {} \;
       popd
