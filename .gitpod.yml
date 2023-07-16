@@ -9,6 +9,7 @@ tasks:
       sudo pacman --needed --noconfirm --noprogressbar -Syuq >/dev/null 2>&1
       pushd /tmp
       curl -LO $PKGBUILD
-      sudo makepkg -sic --noconfirm
+      makepkg -sc --noconfirm
+      sudo pacman -U xbraid-*.pkg.tar.zst
       find . -name '*.tar.*' -exec rm {} \;
       popd
